@@ -1,1 +1,4 @@
 *.pyc
+
+dist/*
+python_griddingmachine.egg-info/*
