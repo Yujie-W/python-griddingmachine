@@ -1,7 +1,7 @@
 # __init__.py
 
 # Version of the griddingmachine package
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 #
 # This script depends on the following packages, please install them
@@ -78,7 +78,7 @@ def query_collection(art_name:str):
         pass
 
 # function to request data from the server
-def request_LUT(art_name:str, lat, lon, cyc:int = 0, user:str = "Anonymous", interpolation:bool = False, server:str = "tofu.gps.caltech.edu", port:int = 5055):
+def request_LUT(art_name:str, lat, lon, cyc:int = 0, user:str = "Anonymous", interpolation:bool = False, server:str = "griddingmachine.myftp.org", port:int = 5055):
     if (art_name in GM_ARTS):
         # send a request to our web server
         if interpolation:

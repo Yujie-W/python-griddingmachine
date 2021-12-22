@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text()
 # This call to setup() does all the work
 setup(
     name="python-griddingmachine",
-    version="0.1.0",
+    version="0.1.1",
     description="GriddingMachine - a database and tool for earth system modeling",
     long_description=README,
     long_description_content_type="text/markdown",
