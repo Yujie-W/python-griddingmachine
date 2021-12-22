@@ -32,7 +32,7 @@ Request the data for a given latitude and longitude from the server without down
 ```python
 vcmax,error = request_LUT('VCMAX_2X_1Y_V1', 35.1, 115.2);
 ```
-Note that the function also allows for other input variables, including `cyc`, `user`, `interpolation`, `server`, and `port`. For example, if `interpolation` is true, the dataset would be interpolated.
+Note that the function also allows for other input variables, including `cyc`, `user`, `interpolation`, `server`, and `port`. E.g., if `interpolation` is true, the dataset would be interpolated.
 ```python
 vcmax,error = request_LUT('VCMAX_2X_1Y_V1', 35.1, 115.2, interpolation=True);
 ```
