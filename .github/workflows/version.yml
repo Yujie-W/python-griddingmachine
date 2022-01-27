@@ -18,9 +18,6 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: "3.8"
-    - name: Get full Python version
-      id: full-python-version
-      run: echo ::set-output name=version::$(python -c "import sys; print('-'.join(str(v) for v in sys.version_info))")
     - name: Install poetry
       run: curl -sL https://install.python-poetry.org | python - -y ${{ matrix.bootstrap-args }}
     - name: Update PATH for Linux
@@ -33,9 +30,6 @@ jobs:
       with:
         path: .venv
         key: venv-${{ runner.os }}-${{ steps.full-python-version.outputs.version }}-${{ hashFiles('**/poetry.lock') }}
-    - name: Ensure cache is healthy
-      if: steps.cache.outputs.cache-hit == 'true'
-      run: timeout 10s poetry run pip --version || rm -rf .venv
     - name: Install dependencies
       run: poetry install
     - name: Run pytest
