@@ -1,4 +1,8 @@
+*.lock
 *.pyc
+*.coverage
 
+__pycache__/*
 dist/*
 python_griddingmachine.egg-info/*
+coverage.xml
