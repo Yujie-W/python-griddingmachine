@@ -1,26 +1,17 @@
 # __init__.py
 
-# Version of the griddingmachine package
-__version__ = "0.1.1"
-
-#
-# This script depends on the following packages, please install them
-# - json
-# - numpy
-# - os
-# - tarfile
-# - toml
-# - urllib
-#
-
 # import necessary supports
 from json           import loads
-from numpy          import array, nan
+from numpy          import array
+from numpy          import nan
 from os             import mkdir
-from os.path        import expanduser, isdir, isfile
+from os.path        import expanduser
+from os.path        import isdir
+from os.path        import isfile
 from tarfile        import open
 from toml           import load
-from urllib.request import urlopen, urlretrieve
+from urllib.request import urlopen
+from urllib.request import urlretrieve
 
 # check if dir exists, if not make the dir
 GM_DIR  = expanduser("~") + "/GMCollections";
