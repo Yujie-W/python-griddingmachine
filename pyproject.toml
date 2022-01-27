@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "python-griddingmachine"
+version = "0.1.2"
+description = "GriddingMachine - a database and tool for earth system modeling"
+authors = ["Yujie Wang <jesiner@gmail.com>"]
+license = "Apache-2.0"
+packages = [{ include = "src/griddingmachine" }]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.0"
+toml = "^0.10"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.0"
+pytest-cov = "^3.0"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
